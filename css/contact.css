@@ -1,0 +1,109 @@
+.context {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+}
+
+.contact-form {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    margin-top: 2rem;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+    margin: 1.2rem 0;
+}
+
+.form-group input,
+.form-group textarea {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+    background-color: transparent;
+    display: block;
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.7s;
+}
+
+.form-group input::after {
+    position: absolute;
+    content: ' ';
+    width: 90%;
+    height: 5px;
+    background-color: red;
+
+}
+
+.form-group input:focus~label,
+.form-group input:valid~label {
+    top: -25px;
+    font-size: 0.8rem;
+}
+
+
+.form-group textarea::after {
+    position: absolute;
+    content: ' ';
+    width: 90%;
+    height: 5px;
+    background-color: red;
+}
+
+.form-group textarea:focus~label,
+.form-group textarea:valid~label {
+    top: -25px;
+    font-size: 0.8rem;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.7s;
+}
+
+.form-group button {
+    padding: 0.65rem 1rem;
+    background-color: slateblue;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 90%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group button::after {
+    content: ' ';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 20px;
+    width: 25%;
+    height: 100%;
+    transform: skewX(45deg);
+    transition: 0.7s;
+    ;
+}
+
+.form-group button:hover::after {
+    left: 90%;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        margin-top: 1rem;
+    }
+}

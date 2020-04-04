@@ -1,0 +1,7 @@
+color:
+	#4795BC - The blue
+	#6E47BC - The purple
+	45deg
+	from top
+	#6E47BC - sidebar
+	#707070 - borderline
